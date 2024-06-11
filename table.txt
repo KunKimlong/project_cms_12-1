@@ -1,53 +1,47 @@
 
-tbl_user{
-    id(pk)    : int
-    username  : varchar(100)
-    email     : varchar(150)
-    password  : varchar(255)
-    thumbnail : varchar(255)
+user{
+    id(PK)
+    username   : varchar(255)
+    email      : varchar(255)
+    password   : varchar(255)
+    profile    : varchar(255)
 }
 
-tbl_news{
-    id(pk)                                : int
-    news_type(sport,social,entertainment) : char(15)
-    category(national,international)      : char(15)
-    banner                                : varchar(255)
-    thumbnail                             : varchar(255)
-    description                           : text
-    viewer                                : int
-    title                                 : varchar(255)
-    user_id(FK)                           : int
-    created_at                            : date
-}
-
-tbl_logo{
-    id(pk)                : int
-    thumbnail             : varchar(255)
-    status(header,footer) : char(7)
-    created_at            : date
-}
-
-tbl_about_us{
-    id(pk)      : int
+news:{
+    id(PK)
+    title       : varchar(255)
+    thumbnail   : varchar(255)
+    banner      : varchar(255)
+    news_type   : varchar(255)
+    category   : varchar(255)
     description : text
-    created_at  : date
+    viewer      : int
+    postdate    : date
 }
 
-tbl_follow{
-    id(pk)                  : int
-    thumbnail               : varchar(255)
-    label                   : varchar(100)
-    url                     : varchar(255)
-    status(follow,footer)   : char(7)
-    created_at              : date
+logo:{
+    id(PK)
+    thumbnail             : varchar(255)
+    status(header,footer) : varchar(255)
 }
 
-tbl_feedback{
-    id(pk)     : int
-    username   : varchar(100)
-    email      : varchar(150)
-    telephone  : char(15)
-    address    : varchar(255)
-    message    : text
-    created_at : date
+about_us:{
+    id(PK)
+    description    : text
+}
+
+follow_us{
+    id(PK)
+    thumbnail      : varchar(255)
+    label          : varchar(255)
+    url            : varchar(255) 
+}
+
+feedback{
+    id(PK)
+    username       : varchar(255)
+    email          : varchar(255)
+    telephone      : varchar(255)
+    address        : varchar(255)
+    message        : text
 }

@@ -1,3 +1,4 @@
+<?php include('function.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +10,13 @@
 </head>
 <body>
     <div class="content-login">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <label>Username</label>
-            <input type="text" class="box">
+            <input type="text" name="username" class="box">
             <label>Email</label>
-            <input type="text" class="box">
+            <input type="text" name="email" class="box">
             <label>Password</label>
-            <input type="password" class="box">
+            <input type="password" name="password" class="box">
             <label for="">Profile:</label>
             <input type="file" name="profile" id="" class="box">
             <div class="wrap-btn">

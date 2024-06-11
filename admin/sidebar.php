@@ -1,3 +1,9 @@
+<?php
+    include('function.php');
+    if(!($_SESSION['user'])){
+        header('location:login.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,13 +57,13 @@
                                 </li>
                                 <li class="parent">
                                     <a class="parent" href="javascript:void(0)">
-                                        <span>MAIN MENU</span>
+                                        <span>Logo</span>
                                         <img src="assets/icon/arrow.png" alt="">
                                     </a>
                                     <ul class="child">
                                         <li>
-                                            <a href="1">View Post</a>
-                                            <a href="1">Add New</a>
+                                            <a href="view-logo.php">View Logo</a>
+                                            <a href="add-logo.php">Add Logo</a>
                                         </li>
                                     </ul>
                                 </li>
